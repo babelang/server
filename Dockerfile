@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 COPY package.json ./
 COPY yarn.lock ./
 RUN yarn
-RUN yarn build 
 COPY . .
+RUN yarn build 
 EXPOSE 8080
 CMD [ "node", "dist/main.js" ]
